@@ -1,0 +1,17 @@
+nav {
+  margin: 15rem 0 12rem 0;
+}
+
+.nav-items {
+  text-align: right;
+  text-transform: uppercase;
+
+  li:nth-of-type(n+1) {
+    margin-left: 2rem;
+  }
+
+  li.active {
+    border-bottom: .2rem solid $font-color;
+    padding-bottom: .5rem;
+  }
+}
