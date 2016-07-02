@@ -81,6 +81,15 @@ a {
   }
 }
 
+button {
+  padding: .3rem;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 img {
   width: 100%;
 }

@@ -7,6 +7,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
 
 }
@@ -14,7 +15,7 @@
 .project {
   opacity: 0;
   transition: z-index .5s ease-out,
-  opacity .3s ease-out .4s;
+              opacity .3s ease-out .4s;
   width: 100%;
   will-change: opacity, z-index;
   z-index: -10;
@@ -23,25 +24,25 @@
     opacity: 1;
     z-index: 10;
   }
+}
 
-  header {
-    margin-bottom: 10rem;
-    position: relative;
-    text-align: center;
+header {
+  margin-bottom: 10rem;
+  position: relative;
+  text-align: center;
 
-    h2 {
-      margin-bottom: 5rem;
+  h2 {
+    margin-bottom: 5rem;
 
-      &:after {
-        background-color: #aaa;
-        content: " ";
-        height: .2rem;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translateX(-50%);
-        width: 8rem;
-      }
+    &:after {
+      background-color: #aaa;
+      content: " ";
+      height: .2rem;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%);
+      width: 8rem;
     }
   }
 }

@@ -1,5 +1,7 @@
 'use strict';
+var nav = document.querySelector('.nav-items');
 var landing = document.querySelector('.landing');
+var about = document.querySelector('article.about');
 var placeholder = document.querySelector('article.project');
 
 var init = (function () {
@@ -34,7 +36,8 @@ var init = (function () {
         path === '#/axis' ||
         path === '#/iceland' ||
         path === '#/coffee-metric' ||
-        path === '#/perfume') {
+        path === '#/rise' ||
+        path === '#/eau-naturale') {
       return true;
     }
 
@@ -67,3 +70,13 @@ var init = (function () {
 
   window.onhashchange = app.route;
 })();
+
+nav.addEventListener('click', function(e) {
+  // if(e.target.classList.indexOf("about") > -1) {
+    landing.classList.add('inactive');
+
+    nav.querySelector('.active').classList.remove('active');
+    e.target.parentNode.classList.add('active');
+    about.classList.add('active');
+  // }
+});
