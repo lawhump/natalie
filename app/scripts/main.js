@@ -32,7 +32,7 @@ var init = (function () {
 
   api.isValidPath = function() {
     var path = api.destination;
-    if (!path.includes('#')) {
+    if (path.indexOf('#') <= -1) {
       api.destination = '#' + api.destination;
     }
 
@@ -55,7 +55,6 @@ var init = (function () {
     if (api.destination !== '') {
       if (api.isValidPath()) {
         var path = 'markup' + api.destination.split('#')[1] + '.html';
-        console.log(path);
         api.getMarkup(path, api.responseHandler);
       }
 
@@ -73,17 +72,15 @@ var init = (function () {
   var app = init;
   app.route();
 
+  var elem = document.querySelector('.project-grid');
+  var masonry = new Masonry( elem, {
+    percentPosition: true,
+    itemSelector: '.project-thumb',
+    columnWidth: '.grid-sizer'
+  });
+
   window.onhashchange = app.route;
 })();
-
-document.querySelector('DOMContentLoaded', function() {
-  // var elem = document.querySelector('.project-grid');
-  // var msnry = new Masonry( elem, {
-  //   percentPosition: true,
-  //   itemSelector: '.project-thumb',
-  //   columnWidth: '.grid-sizer'
-  // });
-});
 
 aboutTab.addEventListener('click', function() {
   if(!aboutTab.classList.contains('active')) {

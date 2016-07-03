@@ -1,15 +1,9 @@
-.work {
-}
-
-.project-wrapper {
-}
-
 .hi {
   margin: 0 auto;
 }
 
 .project-grid {
-  margin-top: 3rem;
+  margin-top: 13rem;
   overflow: visible;
   width: 100%;
 
@@ -28,7 +22,7 @@
   transition: transform .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
 
   h4 {
-    margin-bottom: 10rem;
+    // margin-bottom: 10rem;
   }
 
   &.inactive {
@@ -50,6 +44,35 @@
 }
 
 .h3 {
-  height: 750px;
+  height: 700px;
   // height: 85rem;
 }
+
+// [data-project="axis"] {
+//   background: url(../images/Landing/landingaxis.jpg) center center no-repeat;
+//   background-size: cover auto;
+// }
+// [data-project="coffee"] {
+//   background: url(../images/Landing/coffeeiconspreads-01.jpg) center center no-repeat;
+//   background-size: cover auto;
+// }
+// [data-project="iceland"] {
+//   background: url(../images/Landing/landingiceland.jpg) center center no-repeat;
+//   background-size: cover auto;
+// }
+// [data-project="aquos"] {
+//   background: url(../images/Landing/untitled.17.jpg) center center no-repeat;
+//   background-size: cover auto;
+// }
+// [data-project="perfume"] {
+//   background: url(../images/Landing/IMG_8605.jpg) center center no-repeat;
+//   background-size: cover auto;
+// }
+// [data-project="dailyui"] {
+//   background: url(../images/Landing/12ecommerce.jpg) center center no-repeat;
+//   background-size: cover auto;
+// }
+// [data-project="rise"] {
+//   background: url(../images/Landing/IMG_4039.jpg) center center no-repeat;
+//   background-size: cover 100%;
+// }

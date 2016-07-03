@@ -53,4 +53,10 @@ header {
   .col-2 {
     column-count: 2;
   }
+
+  @media only screen and (max-width: 640px) {
+    .col-2 {
+      column-count: 1;
+    }
+  }
 }

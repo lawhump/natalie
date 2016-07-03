@@ -9,17 +9,9 @@ body {
   font-size: 1.6rem;
   line-height: 2.56rem;
   overflow-x: hidden;
+  -webkit-overflow-scroll: touch;
   padding: 0;
   text-rendering: optimizeLegibility;
-}
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-	body {
-    border-left: none;
-    border-right: none;
-  }
 }
 
 h1,
@@ -35,6 +27,7 @@ h1 {
   font-family: 'Karla', sans-serif;
   font-size: 3.6rem;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 h2 {
@@ -112,6 +105,10 @@ img {
   font-style: italic;
 }
 
+.left {
+  text-align: left;
+}
+
 .center {
   text-align: center;
 }
@@ -126,4 +123,23 @@ img {
 
 .row .columns img {
   margin-bottom: 1.5rem;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	html {
+    font-size: 52.5%;
+  }
+}
+
+.body-wrapper {
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  width: 100%;
 }
