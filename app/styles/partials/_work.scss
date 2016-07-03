@@ -25,6 +25,10 @@
 
 
 .landing {
+  h4 {
+    margin-bottom: 10rem;
+  }
+
   transition: transform .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
 
   &.inactive {

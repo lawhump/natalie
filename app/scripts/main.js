@@ -1,6 +1,6 @@
 'use strict';
-var nav      = document.querySelector('.nav-items');
-var workTab  = nav.querySelector('.work');
+var nav = document.querySelector('.nav-items');
+var workTab = nav.querySelector('.work');
 var aboutTab = nav.querySelector('.about');
 
 
@@ -15,16 +15,16 @@ var init = (function () {
   api.getMarkup = function(url, callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+      if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
         callback(xmlHttp.responseText);
       }
-    }
+    };
     xmlHttp.open('GET', url, true); // true for asynchronous
     xmlHttp.send(null);
   };
 
   api.responseHandler = function(res) {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     placeholder.innerHTML = res;
     placeholder.classList.add('active');
     landing.setAttribute('hidden', '');
@@ -61,7 +61,7 @@ var init = (function () {
 
       else {
         window.location.href = window.location.host + window.location.pathname;
-        history.pushState("", document.title, window.location.pathname);
+        history.pushState('', document.title, window.location.pathname);
       }
     }
   };
@@ -85,8 +85,8 @@ document.querySelector('DOMContentLoaded', function() {
   // });
 });
 
-aboutTab.addEventListener('click', function(e) {
-  if(!aboutTab.classList.contains("active")) {
+aboutTab.addEventListener('click', function() {
+  if(!aboutTab.classList.contains('active')) {
     landing.classList.add('inactive');
 
     workTab.classList.remove('active');
@@ -100,8 +100,8 @@ aboutTab.addEventListener('click', function(e) {
   }
 });
 
-workTab.addEventListener('click', function(e) {
-  if(!workTab.classList.contains("active")) {
+workTab.addEventListener('click', function() {
+  if(!workTab.classList.contains('active')) {
 
     workTab.classList.add('active');
     aboutTab.classList.remove('active');
