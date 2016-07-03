@@ -4,4 +4,13 @@ footer {
 
 .links {
   margin: 4rem auto 8rem auto;
+
+  h5 {
+    margin: 6rem 0 4rem 0;
+  }
+
+  i {
+    color: $font-color-lite;
+    margin-right: 2rem;
+  }
 }
