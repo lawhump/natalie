@@ -11,17 +11,41 @@
 .project-grid {
   margin-top: 3rem;
   overflow: visible;
+  width: 100%;
 
   img {
     margin-bottom: 3.5rem;
   }
 }
 
+.h1 {
+  height: 250px;
+  // height: 25rem;
+}
+
+
 .landing {
-  transition: -webkit-transform .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   transition: transform .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
 
   &.inactive {
     transform: translateX(-100%);
+    transition: transform .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   }
+}
+
+.project-thumb {
+  height: 210px;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+
+.h2 {
+  height: 445px;
+  // height: 54.5rem;
+}
+
+.h3 {
+  height: 750px;
+  // height: 85rem;
 }

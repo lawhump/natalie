@@ -1,5 +1,9 @@
 'use strict';
-var nav = document.querySelector('.nav-items');
+var nav      = document.querySelector('.nav-items');
+var workTab  = nav.querySelector('.work');
+var aboutTab = nav.querySelector('.about');
+
+
 var landing = document.querySelector('.landing');
 var about = document.querySelector('article.about');
 var placeholder = document.querySelector('article.project');
@@ -37,6 +41,7 @@ var init = (function () {
         path === '#/iceland' ||
         path === '#/coffee-metric' ||
         path === '#/rise' ||
+        path === '#/daily-ui' ||
         path === '#/eau-naturale') {
       return true;
     }
@@ -71,12 +76,41 @@ var init = (function () {
   window.onhashchange = app.route;
 })();
 
-nav.addEventListener('click', function(e) {
-  // if(e.target.classList.indexOf("about") > -1) {
+document.querySelector('DOMContentLoaded', function() {
+  // var elem = document.querySelector('.project-grid');
+  // var msnry = new Masonry( elem, {
+  //   percentPosition: true,
+  //   itemSelector: '.project-thumb',
+  //   columnWidth: '.grid-sizer'
+  // });
+});
+
+aboutTab.addEventListener('click', function(e) {
+  if(!aboutTab.classList.contains("active")) {
     landing.classList.add('inactive');
 
-    nav.querySelector('.active').classList.remove('active');
-    e.target.parentNode.classList.add('active');
+    workTab.classList.remove('active');
+    aboutTab.classList.add('active');
+
     about.classList.add('active');
-  // }
+
+    window.setTimeout(function() {
+      landing.setAttribute('hidden', '');
+    }, 600);
+  }
+});
+
+workTab.addEventListener('click', function(e) {
+  if(!workTab.classList.contains("active")) {
+
+    workTab.classList.add('active');
+    aboutTab.classList.remove('active');
+
+    about.classList.remove('active');
+
+    landing.removeAttribute('hidden');
+    window.setTimeout(function() {
+      landing.classList.remove('inactive');
+    }, 100);
+  }
 });
