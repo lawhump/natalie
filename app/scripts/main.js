@@ -24,9 +24,13 @@ var init = (function () {
   };
 
   api.responseHandler = function(res) {
-    window.scrollTo(0, 0);
+    document.querySelector('nav').scrollIntoView();
+    window.scrollBy(0, -30);
     placeholder.innerHTML = res;
-    placeholder.classList.add('active');
+    placeholder.removeAttribute('hidden');
+    window.setTimeout(function() {
+      placeholder.classList.add('active');
+    }, 100);
     landing.setAttribute('hidden', '');
   };
 
@@ -60,8 +64,14 @@ var init = (function () {
 
       else {
         window.location.href = window.location.host + window.location.pathname;
-        history.pushState('', document.title, window.location.pathname);
+        history.pushState("", document.title, window.location.pathname);
       }
+    }
+
+    else {
+      placeholder.classList.remove('active');
+      placeholder.setAttribute('hidden', '');
+      landing.removeAttribute('hidden', '');
     }
   };
 

@@ -1,0 +1,44 @@
+.axis-imgs {
+
+
+  img {
+    height: 100%;
+    max-height: 70rem;
+    width: 100%;
+  }
+
+  .axis-img {
+    display: inline-block;
+    height: 70rem;
+
+    &:first-of-type {
+      background: url(../images/Axis/IMG_4234.jpg) no-repeat center center;
+      background-size: cover;
+      margin-right: 2%;
+      width: 32%;
+    }
+
+    &:last-of-type {
+      background: url(../images/Axis/IMG_4242.jpg) no-repeat;
+      background-position: 25% 50%;
+      background-size: cover;
+      width: 65%;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .axis-imgs {
+
+    .axis-img {
+      height: 50rem;
+
+      &:first-of-type {
+        margin-right: 1%;
+      }
+
+      &:last-of-type {
+      }
+    }
+  }
+}
