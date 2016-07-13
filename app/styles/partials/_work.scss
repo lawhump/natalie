@@ -7,13 +7,52 @@
   overflow: visible;
   width: 100%;
 
-  img {
-  }
-
   a {
     display: inline-block;
     margin-bottom: 3.5rem;
     width: 100%;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    h1 {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .2s ease-out, transform .2s ease-out;
+    }
+    p {
+      opacity: 0;
+      transition: opacity .2s ease-out;
+    }
+  }
+  img {
+    cursor: pointer;
+    transition: filter .3s ease-out;
+    width: 100%;
+    &:hover {
+      filter: brightness(.5)
+    }
+  }
+  figcaption {
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    padding: 1rem;
+    pointer-events: none;
+    position: absolute;
+  }
+  figure:hover {
+    h1 {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    p {
+      opacity: 1;
+      transition: opacity .2s ease-out .2s;
+    }
   }
 }
 
@@ -41,47 +80,15 @@
 
 .h1,
 .h1 img {
-  // height: 250px;
   height: 21rem;
 }
 
 .h2,
 .h2 img {
-  // height: 445px;
   height: 45.5rem;
 }
 
 .h3,
 .h3 img {
-  // height: 700px;
   height: 70rem;
 }
-
-// [data-project="axis"] {
-//   background: url(../images/Landing/landingaxis.jpg) center center no-repeat;
-//   background-size: cover auto;
-// }
-// [data-project="coffee"] {
-//   background: url(../images/Landing/coffeeiconspreads-01.jpg) center center no-repeat;
-//   background-size: cover auto;
-// }
-// [data-project="iceland"] {
-//   background: url(../images/Landing/landingiceland.jpg) center center no-repeat;
-//   background-size: cover auto;
-// }
-// [data-project="aquos"] {
-//   background: url(../images/Landing/untitled.17.jpg) center center no-repeat;
-//   background-size: cover auto;
-// }
-// [data-project="perfume"] {
-//   background: url(../images/Landing/IMG_8605.jpg) center center no-repeat;
-//   background-size: cover auto;
-// }
-// [data-project="dailyui"] {
-//   background: url(../images/Landing/12ecommerce.jpg) center center no-repeat;
-//   background-size: cover auto;
-// }
-// [data-project="rise"] {
-//   background: url(../images/Landing/IMG_4039.jpg) center center no-repeat;
-//   background-size: cover 100%;
-// }
