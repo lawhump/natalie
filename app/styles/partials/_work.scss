@@ -8,14 +8,15 @@
   width: 100%;
 
   img {
+  }
+
+  a {
+    display: inline-block;
     margin-bottom: 3.5rem;
+    width: 100%;
   }
 }
 
-.h1 {
-  height: 250px;
-  // height: 25rem;
-}
 
 
 .landing {
@@ -38,14 +39,22 @@
   margin-bottom: 35px;
 }
 
-.h2 {
-  height: 445px;
-  // height: 54.5rem;
+.h1,
+.h1 img {
+  // height: 250px;
+  height: 21rem;
 }
 
-.h3 {
-  height: 700px;
-  // height: 85rem;
+.h2,
+.h2 img {
+  // height: 445px;
+  height: 45.5rem;
+}
+
+.h3,
+.h3 img {
+  // height: 700px;
+  height: 70rem;
 }
 
 // [data-project="axis"] {
