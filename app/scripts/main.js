@@ -78,6 +78,11 @@ var init = (function () {
   return api;
 })();
 
+function submit() {
+  var message = document.getElementById('emailBody').value;
+  window.location='mailto:ntiquach@gmail.com?subject=Hey Natalie!&body=' + message;
+}
+
 (function() {
   var app = init;
   app.route();
