@@ -7,15 +7,16 @@
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1;
   }
 
 }
 
 .project {
   opacity: 0;
+  transform: translateX(0%);
   transition: z-index .5s ease-out,
-              opacity .3s ease-out .4s;
+              opacity .3s ease-out .4s,
+              transform .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   width: 100%;
   will-change: opacity, z-index;
   z-index: -10;
@@ -23,6 +24,10 @@
   &.active {
     opacity: 1;
     z-index: 10;
+  }
+
+  &.offscreen {
+    transform: translateX(-100%);
   }
 }
 

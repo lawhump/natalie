@@ -95,6 +95,7 @@ var init = (function () {
 aboutTab.addEventListener('click', function() {
   if(!aboutTab.classList.contains('active')) {
     landing.classList.add('inactive');
+    placeholder.classList.add('offscreen');
 
     workTab.classList.remove('active');
     aboutTab.classList.add('active');
@@ -103,21 +104,27 @@ aboutTab.addEventListener('click', function() {
 
     window.setTimeout(function() {
       landing.setAttribute('hidden', '');
+      placeholder.setAttribute('hidden', '');
     }, 600);
   }
 });
 
 workTab.addEventListener('click', function() {
   if(!workTab.classList.contains('active')) {
-
     workTab.classList.add('active');
     aboutTab.classList.remove('active');
 
     about.classList.remove('active');
 
-    landing.removeAttribute('hidden');
+    if(!placeholder.classList.contains('active')){
+      landing.removeAttribute('hidden');
+    }
+    if(placeholder.classList.contains('active')){
+      placeholder.removeAttribute('hidden', '');
+    }
     window.setTimeout(function() {
       landing.classList.remove('inactive');
+      placeholder.classList.remove('offscreen');
     }, 100);
   }
 });
