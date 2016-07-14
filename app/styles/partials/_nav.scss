@@ -6,14 +6,36 @@ nav {
   text-align: right;
   text-transform: uppercase;
 
-  li:nth-of-type(n+1) {
-    margin-left: 2rem;
+  li {
+    position: relative;
+
+    &:not(.active):after {
+      background-color: $font-color;
+      content: " ";
+      height: .2rem;
+      left: 0;
+      position: absolute;
+      top: calc(100% + .5rem);
+      transition: width .2s ease-out;
+      width: 0%;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(n+2) {
+      margin-left: 2rem;
+    }
+
+    &.active {
+      border-bottom: .2rem solid $font-color;
+      padding-bottom: .5rem;
+    }
   }
 
-  li.active {
-    border-bottom: .2rem solid $font-color;
-    padding-bottom: .5rem;
-  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -24,10 +46,6 @@ nav {
 
   .nav-items {
     margin-top: 3rem;
-
-    li:nth-of-type(n+1) {
-      margin-left: 0;
-    }
   }
 }
 

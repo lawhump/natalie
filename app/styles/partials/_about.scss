@@ -26,8 +26,15 @@
 
   .submit {
     $submit-color: lighten($font-color, 10);
-    border-bottom: 1px solid $submit-color;
+    border-bottom: .2rem solid $submit-color;
     color: $submit-color;
     float: right;
+  }
+}
+
+.about-copy {
+
+  a {
+    border-bottom: .2rem solid $font-color;
   }
 }
