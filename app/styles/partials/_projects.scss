@@ -55,6 +55,10 @@ header {
 .description {
   margin-top: 3rem;
 
+  a {
+    border-bottom: .2rem solid $font-color;
+  }
+
   .col-2 {
     column-count: 2;
   }
