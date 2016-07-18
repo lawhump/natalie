@@ -1,0 +1,41 @@
+.dropdown-wrapper {
+  position: relative;
+  text-transform: uppercase;
+
+  button:not(.hamburger) {
+    display: inline-block;
+    height: 100%;
+    padding: 2rem 0;
+    width: 100%;
+  }
+
+  li {
+    border-bottom: 2px solid #999;
+    display: block;
+    opacity: 0;
+
+    &:last-of-type {
+      padding: 1.5rem 0;
+    }
+  }
+
+  img {
+    height: auto;
+    width: 4rem;
+  }
+
+  .dropdown {
+    display: none;
+    left: 0;
+    left: -50%;
+    position: relative;
+    transform: translateX(-88.5%);
+    width: 97.5vw;
+  }
+
+  &.active {
+    .dropdown {
+      display: block;
+    }
+  }
+}
