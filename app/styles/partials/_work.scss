@@ -18,6 +18,7 @@
       opacity: 0;
       transform: translateY(10px);
       transition: opacity .2s ease-out, transform .2s ease-out;
+      white-space: initial;
     }
     p {
       opacity: 0;
@@ -33,12 +34,12 @@
     }
   }
   figcaption {
-    bottom: 0;
+    bottom: 1rem;
     color: #fff;
-    left: 0;
-    padding: 1rem;
+    left: 1rem;
     pointer-events: none;
     position: absolute;
+    width: 80%;
   }
   figure:hover {
     h1 {
