@@ -1,8 +1,11 @@
 'use strict';
 var nav = document.querySelector('.nav-items');
-var workTab = nav.querySelector('.work');
-var aboutTab = nav.querySelector('.about');
+var workTab1 = nav.querySelector('.work');
+var aboutTab1 = nav.querySelector('.about');
 
+var dropdown = document.querySelector('.dropdown');
+var workTab2 = dropdown.querySelector('.work');
+var aboutTab2 = dropdown.querySelector('.about');
 
 var landing = document.querySelector('.landing');
 var about = document.querySelector('article.about');
@@ -78,9 +81,50 @@ var init = (function () {
   return api;
 })();
 
+function toggleDropdown() {
+  document.querySelector('.dropdown-wrapper').classList.toggle('active');
+}
+
 function submit() {
   var message = document.getElementById('emailBody').value;
   window.location='mailto:ntiquach@gmail.com?subject=Hey Natalie!&body=' + message;
+}
+
+function toAboutPage() {
+  if(!aboutTab1.classList.contains('active')) {
+    landing.classList.add('inactive');
+    placeholder.classList.add('offscreen');
+
+    workTab1.classList.remove('active');
+    aboutTab1.classList.add('active');
+
+    about.classList.add('active');
+
+    window.setTimeout(function() {
+      landing.setAttribute('hidden', '');
+      placeholder.setAttribute('hidden', '');
+    }, 600);
+  }
+}
+
+function toWorkPage() {
+  if(!workTab1.classList.contains('active')) {
+    workTab1.classList.add('active');
+    aboutTab1.classList.remove('active');
+
+    about.classList.remove('active');
+
+    if(!placeholder.classList.contains('active')){
+      landing.removeAttribute('hidden');
+    }
+    if(placeholder.classList.contains('active')){
+      placeholder.removeAttribute('hidden', '');
+    }
+    window.setTimeout(function() {
+      landing.classList.remove('inactive');
+      placeholder.classList.remove('offscreen');
+    }, 100);
+  }
 }
 
 (function() {
@@ -97,39 +141,11 @@ function submit() {
   window.onhashchange = app.route;
 })();
 
-aboutTab.addEventListener('click', function() {
-  if(!aboutTab.classList.contains('active')) {
-    landing.classList.add('inactive');
-    placeholder.classList.add('offscreen');
+aboutTab1.addEventListener('click', toAboutPage);
+aboutTab2.addEventListener('click', toAboutPage);
+workTab1.addEventListener('click', toWorkPage);
+workTab2.addEventListener('click', toWorkPage);
 
-    workTab.classList.remove('active');
-    aboutTab.classList.add('active');
-
-    about.classList.add('active');
-
-    window.setTimeout(function() {
-      landing.setAttribute('hidden', '');
-      placeholder.setAttribute('hidden', '');
-    }, 600);
-  }
-});
-
-workTab.addEventListener('click', function() {
-  if(!workTab.classList.contains('active')) {
-    workTab.classList.add('active');
-    aboutTab.classList.remove('active');
-
-    about.classList.remove('active');
-
-    if(!placeholder.classList.contains('active')){
-      landing.removeAttribute('hidden');
-    }
-    if(placeholder.classList.contains('active')){
-      placeholder.removeAttribute('hidden', '');
-    }
-    window.setTimeout(function() {
-      landing.classList.remove('inactive');
-      placeholder.classList.remove('offscreen');
-    }, 100);
-  }
+document.querySelector('.dropdown').addEventListener('click', function() {
+  toggleDropdown();
 });

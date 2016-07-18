@@ -3,6 +3,7 @@
   text-transform: uppercase;
 
   button:not(.hamburger) {
+    color: lighten($font-color, 35);
     display: inline-block;
     height: 100%;
     padding: 2rem 0;
@@ -13,6 +14,10 @@
     border-bottom: 2px solid #999;
     display: block;
     opacity: 0;
+
+    a {
+      color: lighten($font-color, 35);
+    }
 
     &:last-of-type {
       padding: 1.5rem 0;
@@ -25,12 +30,16 @@
   }
 
   .dropdown {
+    // hacky
     display: none;
-    left: 0;
     left: -50%;
     position: relative;
-    transform: translateX(-88.5%);
-    width: 97.5vw;
+    transform: translateX(-90%);
+    width: 105vw;
+  }
+
+  .hamburger {
+    float: right;
   }
 
   &.active {

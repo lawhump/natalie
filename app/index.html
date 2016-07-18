@@ -48,14 +48,28 @@
     <![endif]-->
     <div class="body-wrapper">
       <nav class="row">
-        <div class="small-12 medium-5 large-4 columns">
+        <div class="small-6 medium-5 columns">
           <h1><a href="#">Natalie Quach</a></h1>
         </div>
-        <div class="small-12 small-offset-0 medium-5 medium-offset-2 large-4 large-offset-4 columns">
+        <!--   Desktop nav   -->
+        <div class="show-for-medium medium-5 medium-offset-2 columns">
           <ul class="nav-items">
             <li class="work active"><button>Work</button></li>
             <li class="about"><button>About</button></li>
             <li><a href="mailto:ntiquach@gmail.com?subject=Hey Natalie!">Contact</a></li>
+          </ul>
+        </div>
+
+        <!--   Mobile nav   -->
+        <div class="show-for-small-only small-1 columns dropdown-wrapper">
+          <button class="hamburger" onclick="toggleDropdown();">
+    <!--         <img src="https://cdn4.iconfinder.com/data/icons/flat-black/128/menu.png" alt="" /> -->
+            <h1>🍔</h1>
+          </button>
+          <ul class="dropdown">
+            <li class="fade-1 work active"><button>Work</button></li>
+            <li class="fade-2 about"><button>About</button></li>
+            <li class="fade-3"><a href="mailto:ntiquach@gmail.com?subject=Hey Natalie!">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -63,7 +77,7 @@
       <main class="body">
         <article class="landing">
           <div class="row">
-            <div class="small-12 small-offset-0 medium-8 medium-offset-2 columns">
+            <div class="small-10 small-offset-1 medium-8 medium-offset-2 columns">
               <h4>
                 Hello! I'm Natalie. I'm a graphic and industrial designer with
                 a desire to create products that serve and prioritize the user.

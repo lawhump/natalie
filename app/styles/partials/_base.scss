@@ -177,3 +177,23 @@ and (max-device-width : 480px) {
     animation-fill-mode: forwards;
   }
 }
+
+.show-for-small-only {
+  display: none !important;
+}
+
+@media screen and (max-width: 640px) {
+  .show-for-small-only {
+    display: block !important;
+  }
+}
+
+.show-for-medium {
+  display: none !important;
+}
+
+@media screen and (min-width: 641px) {
+  .show-for-medium {
+    display: block !important;
+  }
+}

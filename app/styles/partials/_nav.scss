@@ -39,6 +39,10 @@ nav {
 }
 
 @media only screen and (max-width: 640px) {
+  nav {
+    margin: 15rem 0 7rem 0;
+  }
+
   nav,
   .nav-items {
     text-align: center;
