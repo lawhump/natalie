@@ -97,6 +97,11 @@ var init = (function () {
 
     landing.removeAttribute('hidden', '');
 
+    if (placeholder.classList.contains('offscreen')) {
+      window.setTimeout(function() {
+        placeholder.classList.remove('offscreen');
+      }, 100);
+    }
   };
 
   return api;
