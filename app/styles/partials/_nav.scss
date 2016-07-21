@@ -1,5 +1,9 @@
 nav {
   margin: 15rem 0 12rem 0;
+
+  div:first-child {
+    text-align: left;
+  }
 }
 
 .nav-items {
