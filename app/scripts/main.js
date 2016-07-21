@@ -60,7 +60,11 @@ var init = (function () {
     api.destination = location.hash;
 
     if (api.destination !== '') {
-      if (api.isValidPath()) {
+      if (api.destination === '#') {
+        api.goHome();
+      }
+
+      else if (api.isValidPath()) {
         var path = 'markup' + api.destination.split('#')[1] + '.html';
         api.getMarkup(path, api.responseHandler);
       }
@@ -68,14 +72,31 @@ var init = (function () {
       else {
         window.location.href = window.location.host + window.location.pathname;
         history.pushState("", document.title, window.location.pathname);
+        api.goHome();
       }
     }
 
     else {
-      placeholder.classList.remove('active');
-      placeholder.setAttribute('hidden', '');
-      landing.removeAttribute('hidden', '');
+      api.goHome();
     }
+  };
+
+  api.goHome = function() {
+    placeholder.classList.remove('active');
+    placeholder.setAttribute('hidden', '');
+
+    if(about.classList.contains('active')) {
+      about.classList.remove('active');
+      landing.classList.remove('inactive');
+    }
+
+    if(aboutTab1.classList.contains('active')) {
+      aboutTab1.classList.remove('active');
+      workTab1.classList.add('active');
+    }
+
+    landing.removeAttribute('hidden', '');
+
   };
 
   return api;
