@@ -198,3 +198,33 @@ and (max-device-width : 480px) {
     display: block !important;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 60.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 57.5%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 56%;
+  }
+}
