@@ -106,3 +106,24 @@
     height: 55rem;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .h1,
+  .h1 img {
+    height: 14.5rem;
+  }
+
+  .h2,
+  .h2 img {
+    height: 25.5rem;
+  }
+
+  .h3,
+  .h3 img {
+    height: 45rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+}
