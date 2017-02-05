@@ -147,6 +147,9 @@ var init = (function () {
         path === '#/coffee-metric' ||
         path === '#/rise' ||
         path === '#/daily-ui' ||
+        path === '#/out-west' ||
+        path === '#/see-america' ||
+        path === '#/azor' ||
         path === '#/eau-naturale') {
       return true;
     }
